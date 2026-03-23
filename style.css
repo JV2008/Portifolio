@@ -1,0 +1,321 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-family: "Montserrat", sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+header {
+    display: flex;
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+header img {
+    width: 150px;
+    height: auto;
+    margin-right: 20px;
+}
+
+header ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+}
+
+li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.hero {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: left;
+    padding: 50px 20px;
+}
+
+.info {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 20px;
+    padding: 20px;
+    height: 30dvh;
+
+
+}
+
+.info ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 2dvh;
+    height: 20dvh;
+    width: 110dvh;
+}
+
+.info li {
+    width: 40dvh;
+    font-weight: bolder;
+    list-style: none;
+    transition: font-size 0.2s;
+}
+
+.info li:hover {
+    font-size: 1.5rem;
+    color: #233a54;
+
+}
+
+.sobremim {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    padding: 50px 20px;
+    margin: 50px 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+}
+
+.perfil-container {
+    position: relative;
+    width: 250px;
+    /* Tamanho da primeira imagem */
+    height: 250px;
+    margin: 50px;
+    /* Espaço para a imagem maior não bater na borda da tela */
+}
+
+/* Estilo da primeira imagem (Redonda) */
+.img-base {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    /* Deixa redonda */
+    object-fit: cover;
+    transition: opacity 0.3s ease;
+}
+
+/* Estilo da segunda imagem (Retrato 4:3) */
+.img-hover {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 300px;
+    /* Largura maior que a original */
+    aspect-ratio: 3 / 4;
+    /* Força a proporção retrato 4:3 */
+
+    /* Centraliza e começa invisível/menor */
+    transform: translate(-50%, -50%) scale(0.5);
+    opacity: 0;
+    pointer-events: none;
+    /* Evita que ela atrapalhe o mouse antes do hover */
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    /* Efeito "elástico" */
+
+    object-fit: cover;
+    border-radius: 8px;
+    /* Cantos levemente arredondados, se desejar */
+    z-index: 10;
+}
+
+/* Ação ao passar o mouse */
+.perfil-container:hover .img-base {
+    opacity: 0.0;
+    /* Escurece a base para dar destaque à nova */
+}
+
+.perfil-container:hover .img-hover {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+    /* Volta ao tamanho real (que é maior) */
+    pointer-events: auto;
+}
+
+
+
+.joao {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    text-align: center;
+    justify-content: space-around;
+}
+
+.titulo {
+    display: flex;
+    justify-content: center;
+    font-family: 'Gill Sans';
+    font-size: 2.5rem;
+}
+
+.experiencias {
+    background-color: #333;
+    color: #fff;
+    border: 10px solid #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 3px;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    padding: 50px 20px;
+    margin: 50px 20px;
+    gap: 20px;
+
+}
+
+.projetos {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.prod {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100dvh;
+    padding: 20px;
+    margin: 20px;
+    background-color: #3333332f;
+    border-radius: 30px;
+}
+
+
+.imgproj {
+    margin-top: 0;
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    width: 80dvh;
+    margin: 20px;
+}
+
+
+
+
+
+
+.certificados {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: wrap;
+    background-color: #333;
+    color: #fff;
+    justify-content: space-around;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    padding: 15dvh;
+    margin: 5dvh;
+}
+
+.card {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-top: 5dvh;
+
+}
+
+.img img {
+    width: 40dvh;
+    height: auto;
+    margin: 3dvh;
+
+}
+
+/* Contact Section */
+.contact {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 50px 20px;
+    margin: 50px 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+.contact h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.contact>p {
+    font-size: 1.2rem;
+    color: #666;
+    margin-bottom: 30px;
+}
+
+.contact-info {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    flex-wrap: wrap;
+    cursor: pointer;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 15px 25px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contact-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.contact-item img {
+    width: 15dvh;
+    height: 10dvh;
+    object-fit: contain;
+}
+
+.contact-item a {
+    display: flex;
+    align-items: center;
+}
+
+.contact-item p {
+    font-size: 1rem;
+    color: #333;
+    font-weight: 500;
+}
+
+footer {
+    text-align: center;
+    padding: 20px 0;
+    background-color: #333;
+    color: #fff;
+    margin-top: 50px;
+}
