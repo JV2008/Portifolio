@@ -119,7 +119,7 @@ Você pode entrar em contato através de:
 Adicione aqui uma imagem do projeto:
 
 ```bash
-![Preview do portfólio](preview.png)
+![Preview do portfólio](portifolio.png)
 ```
 
 ---
